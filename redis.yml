@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    ports:
+      - 6379:6379
+    # networks:
+    #   net: 
+    #     ipv4_address: 172.26.13.5
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+
+# networks:
+#   net: 
+#     driver: bridge
+#     ipam:
+#      config:
+#        - subnet: 172.26.13.5/16
+#          gateway: 172.26.13.5
